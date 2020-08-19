@@ -72,8 +72,10 @@ class SchoolTest < Minitest::Test
 
   def test_time_is_not_military_time
     school = School.new('9:00', 7)
+    school2 = School.new('9:00', 3)
 
     assert_equal "4:00", school.convert_end_time_to_clock_time
+    assert_equal "12:00", school2.convert_end_time_to_clock_time
   end
 
 end
