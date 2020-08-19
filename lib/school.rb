@@ -15,11 +15,7 @@ class School
   end
 
   def is_full_time?
-    if @hours_in_school_day >= 4
-      true
-    else
-      false
-    end
+    true if @hours_in_school_day >= 4
   end
 
   def standard_student_names
@@ -29,7 +25,11 @@ class School
   end
 
   def convert_end_time_to_clock_time
-    return "#{end_time.to_i - 12}" + ":00"
+    if end_time.to_i <= 12
+      return "#{end_time.to_i}" + ":00"
+    else
+      return "#{end_time.to_i - 12}" + ":00"
+    end
   end
 
 end
