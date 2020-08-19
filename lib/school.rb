@@ -26,7 +26,7 @@ class School
 
   def convert_end_time_to_clock_time
     if end_time.to_i <= 12
-      return "#{end_time.to_i}" + ":00"
+      return end_time
     else
       return "#{end_time.to_i - 12}" + ":00"
     end
