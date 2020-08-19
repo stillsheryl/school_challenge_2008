@@ -28,4 +28,8 @@ class School
     end
   end
 
+  def convert_end_time_to_clock_time
+    return "#{end_time.to_i - 12}" + ":00"
+  end
+
 end
